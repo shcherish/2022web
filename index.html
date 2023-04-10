@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포렌식 소개</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1 title="포렌식 분야 중 디지털 포렌식에 대해 소개하겠습니다.">
+        <div class="blur">포렌식</div>
+    </h1>
+
+    <hr>
+
+    <div style="background-color:#FFD9C0;padding:20px;">
+        <p>포렌식이란 국내에서는 'forensics' 의 발음 그대로 부르지 않고 법의학 또는 과학수사라는 용어로 불러왔습니다.<br>
+            또한 'digital forensics' 의 도입은 빨랐고, IT 기반이기 때문에 원문 그대로 발음하는 것에 거부감이 덜하여 포렌식, 디지털 포렌식으로 부르게 되었습니다.<br>
+            <a href="https://korea07.tistory.com/25" target="_blank">디지털 포렌식</a>은 법정 제출용 디지털 증거를 수집하여 분석하는 기술이라고 정의할 수 있으며,<br>
+            크게 시스템 포렌식, 네트워크 포렌식, 모바일 포렌식, 디스크 포렌식으로 분류할 수 있습니다.<br><br>
+            <span style="color:white"><b> 즉, 포렌식이란 디지털기기를 매개체로 하여 발생한 특정 행위의 사실 관계를 규명하고 증명하기 위한 절차와 방법입니다. </b></span>
+        </p>
+    </div>
+
+    <hr>
+
+    <audio src="media/효과음-공개수배사건25시.mp3" controls loop></audio>
+
+</header>
+
+<br>
+
+<div class="rotation">
+        <span id="span" style="background-color:yellow">
+            사이버안전국:02-3150-2659
+            사이버경찰청:02-3150-2914
+            경찰청대표번호:182
+            경찰민원포털:02-3150-0434
+        </span>
+</div>
+
+<script>
+    let span = document.getElementById("span");
+    let timerID = setInterval("doRotate()", 100);
+
+    span.onclick = function (e)
+    {
+        clearInterval(timerID);
+    }
+
+    function doRotate()
+    {
+        let str = span.innerHTML;
+        let firstChar = str.substr(0,1);
+        let remains = str.substr(1, str.length-1);
+        str = remains + firstChar;
+        span.innerHTML = str;
+    }
+</script>
+
+<div class="nav">
+    <h2>목차</h2>
+    <div class="menu">
+        <ul>
+            <li> <a href="#서버"> 시스템 포렌식 </a>
+            <li> <a href="#전송"> 네트워크 포렌식 </a>
+            <li> <a href="#애플리케이션"> 모바일 포렌식 </a>
+            <li> <a href="#드라이브"> 디스크 포렌식 </a>
+            <li> <a href="#샘플"> 샘플 </a>
+        </ul>
+    </div>
+</div>
+
+<section>
+    <article id="system">
+        <h2 id="서버"><mark><a href="https://namu.wiki/w/%EC%8B%9C%EC%8A%A4%ED%85%9C" target="_blank">시스템 포렌식</a></mark></h2>
+        <p>
+            시스템 포렌식이란 서버나 PC 등을 대상으로 하는 디지털 포렌식 전반을 일컫습니다.<br>
+            시스템에 대한 기술로는 증거 복구, 증거 수집 및 보관, 증거 분석이 있습니다.<br><br>
+            첫번째 <strong>증거 복구</strong>란 <strong>삭제된 파일 복구, 파일 시스템 복구, 시스템 로그온 우회 기법</strong>이 있습니다.<br>
+            두번째로 <strong>수집 및 보관</strong>은 <strong>휘발성 데이터 수집, 시스템 초기 대응, 라이브 포렌식</strong>이 있으며,<br>
+            마지막으로 <strong>증거 분석</strong>에는 <strong>윈도우 레지스트리 분석, 시스템 로그 분석, 백업 데이터 분석</strong>이 있습니다.
+        </p>
+    </article>
+
+    <article id="network">
+        <h2 id="전송"><mark><a href="https://coding-factory.tistory.com/340" target="_blank"> 네트워크 포렌식 </a></mark></h2>
+        <p>
+            네트워크 포렌식이란 네트워크를 통해 전송되는 데이터, 패스워드, 접속 기록 등 데이터 프래픽 분석, 네트워크 환경 조사 등을 수행합니다.<br>
+            네트워크 데이터들(패킷,로그)은 휘발성이 강하여 증거를 수집하고 인정받는 게 어렵고, <strong>많은 데이터 양으로 인해 분석하고 증거로서의 가치를 만들어 내는 것이 중요</strong>합니다. <br><br>
+            네트워크의 <strong>사용 도구로는 CapTipper, Network Miner, Wireshark</strong> 등이 있습니다.
+        </p>
+    </article>
+
+    <article id="mobile">
+        <h2 id="애플리케이션"><mark><a href="https://kdft.re.kr/MobileForensic" target="_blank"> 모바일 포렌식 </a></mark></h2>
+        <p>
+            모바일 포렌식이란 스마트폰, 전자수첩, 디지털카메라, MP3플레이어, 휴대용 메모리카드 등에 저장된 데이터를 추출 혹은 복원하는 기법을 뜻합니다.<br>
+            기존 모바일 포렌식의 데이터는 통화 기록, 연락처, SNS 와 MMS 메시지 등이 대부분이었지만,<br>
+            최근에는 웹브라우징, 무선네트워크 환경 설정, 이메일 및 이미지 등과 같은 데이터나 스마트폰 애플리케이션(앱) 관련 중요 데이터 등으로 범위가 확대되고 있습니다.<br><br>
+            즉, <strong>모바일 기기에서 디지털 증거나 데이터를 복구해 범죄수사에 중요한 법적 증거자료로 사용할 수 있도록 방법을 연구하는 분야</strong>가 바로 모바일 포렌식입니다.
+        </p>
+    </article>
+
+    <article id="disk">
+        <h2 id="드라이브"><mark><a href="https://digitalforensiclab.co.kr/disk.php" target="_blank"> 디스크 포렌식 </a></mark></h2>
+        <p>
+            디스크 포렌식이란 물리적인 저장장치인 하드디스크, 플로피디스크, CD-ROM 등 <strong>각종 보조 장치의 데이터를 분석하는 기법</strong>입니다.<br><br>
+            사용 도구로는 하드 드라이브의 데이터를 복구하려고 고안된 <strong>Data Compass, FTK Imager</strong> 등이 있습니다.
+        </p>
+    </article>
+
+    <article id="photo">
+        <h2 id="샘플"><mark> 샘플 </mark></h2>
+        <table border="1">
+            <caption><strong> &lt;&lt;시스템 포렌식&gt;&gt; </strong></caption>
+            <thead>
+            <tr><th>Windows</th><th>Linux</th><th>Redhat</th></tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th><img src="media/시스템_windows.jpg" width="230" height="174"></th>
+                <th><img src="media/시스템_Linux.jpg" width="230" height="153"></th>
+                <th><img src="media/시스템_redhat.jpg" width="209" height="230"></th>
+            </tr>
+            </tfoot>
+        </table> <br><br>
+
+        <table border="1">
+            <caption><strong> &lt;&lt;네트워크 포렌식&gt;&gt; </strong></caption>
+            <thead>
+            <tr><th>CapTipper</th><th>Wireshark</th><th>Network Miner</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th><img src="media/네트워크_CapTipper.jpg" width="230" height="210"></th>
+                <th><img src="media/네트워크_Wireshark.jpg" width="230" height="230"></th>
+                <th><img src="media/네트워크_Network-Miner.jpg" width="230" height="230"></th>
+            </tr>
+            </tbody>
+        </table> <br><br>
+
+        <table border="1">
+            <caption><strong> &lt;&lt;모바일 포렌식&gt;&gt; </strong></caption>
+            <thead>
+            <tr><th>디지털카메라</th><th>스마트폰</th><th>웹브라우저</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th><img src="media/모바일_디지털카메라.jpg" width="173" height="230"></th>
+                <th><img src="media/모바일_스마트폰.jpg" width="173" height="230"></th>
+                <th><img src="media/모바일_웹브라우저.jpg" width="230" height=158></th>
+            </tr>
+            </tbody>
+        </table> <br><br>
+
+        <table border="1">
+            <caption><strong> &lt;&lt;디스크 포렌식&gt;&gt; </strong></caption>
+            <thead>
+            <tr><th>하드디스크</th><th>FTK Imager</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th><img src="media/디스크_하드디스크.jpg" width="221" height="200"></th>
+                <th><img src="media/디스크_FTK%20Imager.jpg" width="230" height="168"v></tr>
+            </tbody>
+        </table> <br><br>
+
+    </article>
+</section>
+
+<div class="footer">
+    <b><a href="survey.html" target="_blank">&nbsp&nbsp 설문조사</a></b>
+    <b><p> Copyright 2022 by SeHee </p></b>
+</div>
+
+</body>
+</html>

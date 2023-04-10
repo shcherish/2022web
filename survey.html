@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>포렌식 설문조사</title>
+    <link href="survey.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>설문지</h1>
+    이 설문조사는 포렌식 소개를 본 학생들의 의견을 듣고 더 나은 개선을 위한 자료로 사용되오니, <br>
+    보고 느낀 점을 답변하여 주시기 바랍니다. 많은 참여 부탁드립니다.
+    <hr>
+</header>
+
+<div class="section">
+    <form>
+    <article id="age">
+        학년
+        <label><input type="radio" name="age" value="1">1학년</label>
+        <label><input type="radio" name="age" value="2">2학년</label>
+        <label><input type="radio" name="age" value="3">3학년</label>
+        <label><input type="radio" name="age" value="4">4학년</label>
+        <br><br>
+    </article>
+
+    <article id="gender">
+        성별
+        <label><input type="radio" name="gender" value="5">남</label>
+        <label><input type="radio" name="gender" value="6">여</label>
+        <br><br>
+    </article>
+
+    <article id="name">
+        이메일
+        <input type="name" placeholder="id@naver.com">
+        <br><br>
+    </article>
+
+    <article id="interest">
+        관심 분야
+        <select name="interest">
+            <option value="7">시스템 포렌식</option>
+            <option value="8">네트워크 포렌식</option>
+            <option value="9">모바일 포렌식</option>
+            <option value="10">디스크 포렌식</option>
+        </select>
+        <br><br>
+    </article>
+
+    <article id="checkbox">
+        진로(다중선택)
+        <label><input type="checkbox" value="11">개발</label>
+        <label><input type="checkbox" value="12">보안</label>
+        <label><input type="checkbox" value="13">컨설팅</label>
+        <label><input type="checkbox" value="14">창업</label><br><br>
+    </article>
+
+    <article id="text">
+        남기고 싶은 말 <br>
+        <textarea cols="70" rows="10" placeholder="글을 남겨주세요"></textarea>
+        <br><br>
+    </article>
+
+    <article id="Information">
+        개인정보 수집 및 이용에 동의하시나요?
+        <label><input type="radio" name="Information" value="7">동의한다.</label>
+        <label><input type="radio" name="Information" value="8">동의하지 않는다.</label>
+        <br><br>
+    </article>
+    </form>
+</div>
+
+<footer>
+    <button type="submit">제출하기</button>
+    <p> Copyright 2022 by SeHee </p>
+</footer>
+
+</body>
+</html>
